@@ -1,37 +1,40 @@
-// app/page.js
+import React from 'react';
+
 export default function Home() {
-  const whatsappNumber = "212606064455";
-  const locationMap = "https://www.google.com/maps"; // الرابط اللي عطيتيني
+  const whatsapp = "212606064455";
+  const mapLink = "https://www.google.com/maps"; // بدل هاد الرابط برابط الخريطة ديالك
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <div style={{ fontFamily: 'sans-serif' }}>
       {/* Header */}
-      <nav className="p-6 bg-white shadow-md flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-blue-700">Auto Salé Nouvelle</h1>
-        <div className="flex gap-4">
-          <a href={`https://wa.me/${whatsappNumber}`} className="bg-green-500 text-white px-4 py-2 rounded">واتساب</a>
-        </div>
+      <nav style={{ padding: '20px', background: '#1e40af', color: 'white', display: 'flex', justifyContent: 'space-between' }}>
+        <h1 style={{ margin: 0 }}>Auto Salé Nouvelle</h1>
+        <a href={`https://wa.me/${whatsapp}`} style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>واتساب</a>
       </nav>
 
       {/* Hero Section */}
-      <header className="text-center py-20 bg-blue-600 text-white">
-        <h2 className="text-4xl font-bold">كراء السيارات بسلا الجديدة</h2>
-        <p className="mt-4">طوموبيلات جداد، ثمن مناسب، وخدمة سريعة - ختار طوموبيلتك دابا!</p>
+      <header style={{ textAlign: 'center', padding: '50px 20px', background: '#f3f4f6' }}>
+        <h2 style={{ fontSize: '2.5rem', color: '#1e40af' }}>أحسن طوموبيلات فالكراء بسلا</h2>
+        <p>مرحبا بك فـ "أوطو سلا الجديدة" - الجودة والثقة</p>
       </header>
 
-      {/* Language Toggle Placeholder */}
-      <div className="text-center py-4">
-        <button className="mx-2">العربية</button> | 
-        <button className="mx-2">Français</button> | 
-        <button className="mx-2">Darija</button>
+      {/* Languages */}
+      <div style={{ textAlign: 'center', padding: '10px' }}>
+        <span>العربية</span> | <span>Français</span> | <span>Darija</span>
       </div>
 
-      {/* Contact Section */}
-      <section className="p-10 text-center">
-        <h3 className="text-xl font-semibold">تواصل معانا</h3>
-        <p className="my-4">رقم الواتساب: {whatsappNumber}</p>
-        <a href={locationMap} className="text-blue-500 underline">شوف فين كاينين فـ Google Maps</a>
+      {/* CTA Button */}
+      <section style={{ textAlign: 'center', padding: '40px' }}>
+        <a href={`https://wa.me/${whatsapp}`} style={{ background: '#25D366', color: 'white', padding: '15px 30px', borderRadius: '5px', textDecoration: 'none', fontSize: '1.2rem' }}>
+          احجز طوموبيلتك دابا عبر الواتساب
+        </a>
       </section>
-    </main>
+
+      {/* Footer */}
+      <footer style={{ textAlign: 'center', padding: '20px', background: '#333', color: 'white' }}>
+        <p>Auto Salé Nouvelle - 2026</p>
+        <a href={mapLink} style={{ color: '#60a5fa' }}>موقعنا فـ Google Maps</a>
+      </footer>
+    </div>
   );
 }
