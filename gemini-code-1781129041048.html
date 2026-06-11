@@ -1,39 +1,55 @@
+// هذا الكود يغنيك عن باقي الملفات المعقدة في البداية
 import React from 'react';
 
 export default function Home() {
+  // المعلومات الخاصة بكم
   const whatsapp = "212606064455";
-  const mapLink = "https://www.google.com/maps"; // بدل هاد الرابط برابط الخريطة ديالك
+  const mapLink = "https://www.google.com/maps"; // ضع هنا الرابط الحقيقي للموقع
 
   return (
-    <div style={{ fontFamily: 'sans-serif' }}>
-      {/* Header */}
-      <nav style={{ padding: '20px', background: '#1e40af', color: 'white', display: 'flex', justifyContent: 'space-between' }}>
-        <h1 style={{ margin: 0 }}>Auto Salé Nouvelle</h1>
-        <a href={`https://wa.me/${whatsapp}`} style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>واتساب</a>
+    <div style={{ direction: 'rtl', fontFamily: 'Arial, sans-serif', margin: 0, padding: 0 }}>
+      {/* Navigation */}
+      <nav style={{ background: '#004a99', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <h1 style={{ margin: 0 }}>أوطو سلا الجديدة - Auto Salé Nouvelle</h1>
       </nav>
 
       {/* Hero Section */}
-      <header style={{ textAlign: 'center', padding: '50px 20px', background: '#f3f4f6' }}>
-        <h2 style={{ fontSize: '2.5rem', color: '#1e40af' }}>أحسن طوموبيلات فالكراء بسلا</h2>
-        <p>مرحبا بك فـ "أوطو سلا الجديدة" - الجودة والثقة</p>
+      <header style={{ background: '#f4f4f4', padding: '40px', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '2rem', color: '#333' }}>أحسن كراء سيارات في سلا</h2>
+        <p>خدمة احترافية، سيارات في حالة ممتازة، وأثمنة تنافسية</p>
       </header>
 
-      {/* Languages */}
-      <div style={{ textAlign: 'center', padding: '10px' }}>
-        <span>العربية</span> | <span>Français</span> | <span>Darija</span>
+      {/* Language Section */}
+      <div style={{ textAlign: 'center', padding: '10px', background: '#ddd' }}>
+        العربية | Français | Darija
       </div>
 
-      {/* CTA Button */}
-      <section style={{ textAlign: 'center', padding: '40px' }}>
-        <a href={`https://wa.me/${whatsapp}`} style={{ background: '#25D366', color: 'white', padding: '15px 30px', borderRadius: '5px', textDecoration: 'none', fontSize: '1.2rem' }}>
-          احجز طوموبيلتك دابا عبر الواتساب
+      {/* Main Content - Call to Action */}
+      <section style={{ padding: '50px', textAlign: 'center' }}>
+        <h3 style={{ fontSize: '1.5rem' }}>احجز سيارتك الآن</h3>
+        <p>تواصل معنا مباشرة عبر الواتساب للاستفسار عن السيارات المتوفرة</p>
+        <br />
+        <a 
+          href={`https://wa.me/${whatsapp}`} 
+          style={{ 
+            backgroundColor: '#25d366', 
+            color: 'white', 
+            padding: '15px 30px', 
+            borderRadius: '10px', 
+            textDecoration: 'none', 
+            fontSize: '1.2rem',
+            fontWeight: 'bold'
+          }}
+        >
+          اتصل بنا عبر الواتساب
         </a>
       </section>
 
-      {/* Footer */}
-      <footer style={{ textAlign: 'center', padding: '20px', background: '#333', color: 'white' }}>
-        <p>Auto Salé Nouvelle - 2026</p>
-        <a href={mapLink} style={{ color: '#60a5fa' }}>موقعنا فـ Google Maps</a>
+      {/* Location Section */}
+      <footer style={{ background: '#333', color: '#fff', padding: '30px', textAlign: 'center' }}>
+        <p>موقعنا في سلا</p>
+        <a href={mapLink} style={{ color: '#ffcc00', textDecoration: 'none' }}>اضغط هنا للتوجه إلى موقعنا عبر الخريطة</a>
+        <p style={{ marginTop: '20px', fontSize: '0.8rem' }}>© 2026 Auto Salé Nouvelle</p>
       </footer>
     </div>
   );
