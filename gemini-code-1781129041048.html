@@ -1,34 +1,58 @@
-import React from 'react';
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أوطو سلا الجديدة - Auto Salé Nouvelle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-export default function Home() {
-  const whatsapp = "212606064455";
-  const mapLink = "https://maps.google.com"; // حط الرابط ديالك هنا
-
-  return (
-    <main style={{ fontFamily: 'sans-serif', padding: '20px', maxWidth: '800px', margin: 'auto' }}>
-      <header style={{ textAlign: 'center', padding: '40px 0' }}>
-        <h1 style={{ color: '#004a99' }}>أوطو سلا الجديدة</h1>
-        <p>كراء السيارات بأفضل الأثمنة في سلا</p>
-      </header>
-
-      <section style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
-        <div style={{ background: '#f0f0f0', padding: '20px', borderRadius: '10px', width: '100%' }}>
-          <h2>خدماتنا</h2>
-          <p>نوفر لكم سيارات حديثة، نظيفة ومكيفة لراحتكم.</p>
+    <nav class="bg-blue-700 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-xl md:text-2xl font-bold tracking-wide">🚗 أوطو سلا الجديدة</h1>
+            <div class="flex gap-2">
+                <span class="text-xs bg-blue-800 px-2 py-1 rounded">العربية</span>
+                <span class="text-xs text-gray-300 px-2 py-1">Français</span>
+                <span class="text-xs text-gray-300 px-2 py-1">Darija</span>
+            </div>
         </div>
+    </nav>
 
-        <a href={`https://wa.me/${whatsapp}`} style={{ 
-          background: '#25d366', color: 'white', padding: '15px 40px', 
-          borderRadius: '50px', textDecoration: 'none', fontWeight: 'bold' 
-        }}>
-          احجز سيارتك الآن عبر الواتساب
-        </a>
-      </section>
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-16 px-4">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4">كراء السيارات بسلا الجديدة</h2>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-90">طوموبيلات نقيين، أثمنة مناسبة، وخدمة سريعة. راحتكم هي أولويتنا!</p>
+    </header>
 
-      <footer style={{ marginTop: '50px', textAlign: 'center', borderTop: '1px solid #ccc', paddingTop: '20px' }}>
-        <p>تواصل معنا: {whatsapp}</p>
-        <a href={mapLink} target="_blank" rel="noopener noreferrer">موقعنا على الخريطة</a>
-      </footer>
+    <main class="container mx-auto my-12 px-4 max-w-3xl text-center">
+        <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <div class="text-6xl mb-4 text-emerald-500">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">احجز سيارتك الآن</h3>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                باش تشوف الطوموبيلات اللي موجودين دابا وتعرف الأثمنة، تواصل معانا مباشرة على الواتساب. الدعم متوفر 24/7.
+            </p>
+            
+            <a href="https://wa.me/212606064455" target="_blank" 
+               class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg transition duration-350 ease-in-out transform hover:scale-105">
+                <i class="fab fa-whatsapp ml-2"></i> تواصل معانا فـ الواتساب
+            </a>
+        </div>
     </main>
-  );
-}
+
+    <footer class="bg-gray-900 text-white text-center py-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <p class="font-semibold mb-2 text-blue-400">📍 موقعنا في سلا</p>
+            <a href="https://www.google.com/maps/place/Auto+Sala+El+Jadida/@34.0231952,-6.7601065,15z/data=!4m6!3m5!1s0xda741d7f37022cf:0x5a0ac50ecd0b31f5!8m2!3d34.0233662!4d-6.7480057!16s%2Fg%2F11hbpfm0fs?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-yellow-400 hover:underline text-sm block mb-6">
+                اضغط هنا للتوجه إلى الموقع عبر Google Maps
+            </a>
+            <div class="border-t border-gray-800 pt-4 text-xs text-gray-500">
+                &copy; 2026 Auto Salé Nouvelle. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
